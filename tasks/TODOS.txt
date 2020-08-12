@@ -1,0 +1,9 @@
+August, friday 14, before 6:30 pm:    
+    1. To create Github account
+    2. To create new repository named: "client-server"
+    3. To install XAMMP
+    4. To create a basic web site, this site must include:
+        1. At least one HTML page
+        2. At least one CSS style file
+        3. At least one image
+    5. Push newly created web site on GitHub
