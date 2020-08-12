@@ -1,0 +1,12 @@
+Cliente
+Servidor
+HTTP
+
+
+TAREA
+	Instalar XAMMP
+	Crear una página sencilla que tenga:
+		HTML
+		Archivo CSS externo
+		3 imágenes
+	Crear una cuenta en GitHub
