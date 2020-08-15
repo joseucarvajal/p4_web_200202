@@ -8,8 +8,9 @@ August, friday 14, before 6:30 pm:
         3. At least one image
     5. Set up and push newly created website to GitHub
 
-August, Thuesday 18:
-    1. To identify the calculator operation (+, -, *, /)
+August, tuesday 18, before 6:30:
+    1. To identify the calculator operation (+, -, *, /), only one operation at a time. Basically, 
+        there must be a new variable which is going to indicate what kind the operation is.
         Hint: Do not use special characters (+, -, *, /), instead use: (s, r, ...)
     2.  if result is a positive number, display a happy face image.
         if result is a negative number, display a sad face image.
