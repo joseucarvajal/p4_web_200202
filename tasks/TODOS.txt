@@ -7,3 +7,9 @@ August, friday 14, before 6:30 pm:
         2. At least one CSS style file
         3. At least one image
     5. Set up and push newly created website to GitHub
+
+August, Thuesday 18:
+    1. To identify the calculator operation (+, -, *, /)
+        Hint: Do not use special characters (+, -, *, /), instead use: (s, r, ...)
+    2.  if result is a positive number, display a happy face image.
+        if result is a negative number, display a sad face image.
