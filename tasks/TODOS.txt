@@ -14,3 +14,17 @@ August, tuesday 18, before 6:30:
         Hint: Do not use special characters (+, -, *, /), instead use: (s, r, ...)
     2.  if result is a positive number, display a happy face image.
         if result is a negative number, display a sad face image.
+
+August, tuesday 25, before 6:30 p.m.
+	1. 	To read about forms: https://www.w3schools.com/html/html_forms.asp, the entire chapter (5 pages).
+	2. 	To create a form, this form must include all kind of input element. This form must include all of the topics/attributes (inputs = text, number, radio, checkbox)
+		included in forms lecture.
+	3. 	Once you have submitted the form, information about form should be displayed.
+	4.	To set up a new GitHub project/repository called "php-forms"
+	5. 	To take screenshots into a folder called "screenshots" :
+		5.1. Form
+		5.2. Server response success
+		5.3. Server response error validation messages
+		5.4. Postman response success
+		5.5. Postman response error(s)
+	6. Validate form values in server side
