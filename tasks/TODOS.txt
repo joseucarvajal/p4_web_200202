@@ -30,9 +30,10 @@
 	6. Validate form values in server side
 	
 
----------- Fetching records data base. Deadline: September, tuesday the first.
+---------- Fetching records data base. Deadline: September, tuesday the first, before 6:30 p.m.
 	1. To create a new page to search products. This page is going to allow you to filter out products by (name, price, category	
 	2. Create it in a new GitHub repository
+	3. Screenshots
 
 
 ---------- Final project. Deadline: September, friday 11
@@ -42,6 +43,7 @@
 		2.2. At least 2 pages with forms. The user could store the forms information into database.
 		2.3. At least 1 page to filter out data, as per the class exercise.
 		2.4. Extra point for presentation (UX) details and working in english.
+		2.5. Screenshots
 	
 	Restrictions:
 		1. The created database should have at least three tables related among them.
