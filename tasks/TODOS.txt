@@ -1,4 +1,4 @@
-August, friday 14, before 6:30 pm:    
+---------- August, friday 14, before 6:30 pm:    
     1. To create and set up Github account
     2. To create new repository named: "client-server"
     3. To install XAMMP
@@ -8,14 +8,14 @@ August, friday 14, before 6:30 pm:
         3. At least one image
     5. Set up and push newly created website to GitHub
 
-August, tuesday 18, before 6:30:
+---------- August, tuesday 18, before 6:30:
     1. To identify the calculator operation (+, -, *, /), only one operation at a time. Basically, 
         there must be a new variable which is going to indicate what kind the operation is.
         Hint: Do not use special characters (+, -, *, /), instead use: (s, r, ...)
     2.  if result is a positive number, display a happy face image.
         if result is a negative number, display a sad face image.
 
-August, tuesday 25, before 6:30 p.m.
+---------- August, tuesday 25, before 6:30 p.m.
 	1. 	To read about forms: https://www.w3schools.com/html/html_forms.asp, the entire chapter (5 pages).
 	2. 	To create a form, this form must include all kind of input element. This form must include all of the topics/attributes (inputs = text, number, radio, checkbox)
 		included in forms lecture.
@@ -28,3 +28,31 @@ August, tuesday 25, before 6:30 p.m.
 		5.4. Postman response success
 		5.5. Postman response error(s)
 	6. Validate form values in server side
+	
+
+---------- Fetching records data base. Deadline: September, tuesday the first.
+	1. To create a new page to search products. This page is going to allow you to filter out products by (name, price, category	
+	2. Create it in a new GitHub repository
+
+
+---------- Final project. Deadline: September, friday 11
+	1. To create a web application	
+	2. The web page should contain: images, text, HTML
+		2.1. Index page with GIST (General information) about the web application
+		2.2. At least 2 pages with forms. The user could store the forms information into database.
+		2.3. At least 1 page to filter out data, as per the class exercise.
+		2.4. Extra point for presentation (UX) details and working in english.
+	
+	Restrictions:
+		1. The created database should have at least three tables related among them.
+		2. Create it in a new GitHub repository
+		
+	Schedule
+		1. September, tuesday the first: class
+		2. September, friday the fourth: Final project support
+		3. September, tuesday 8: Final project support
+		4. September, friday 11. Grading.
+		
+		
+		
+		
