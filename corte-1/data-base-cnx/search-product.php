@@ -15,21 +15,28 @@
         
         $where = "";
         $logicalOperator = 'OR';        
+        $parameters = array();
         //2. Get REQUEST data
-        if(isset($_POST["search"]) && ($_POST["search"] == "Search products (OR)" || $_POST["search"] == "Search products (AND)") ){
+        if(isset($_POST["search"]) && ($_POST["search"] == "Search products (OR)" || $_POST["search"] == "Search products (AND)") ){            
             if($_POST["search"] == "Search products (AND)"){
                 $logicalOperator = "AND";
             }
             $where = " WHERE ";
-        }
 
-        $parameters = array();
-        foreach ($_POST as $key => $value) {            
-            if($_POST[$key] && $key !== "search"){
-                $parameters[":$key"] = "%$value%";
-                $where = $where . "$key LIKE :$key $logicalOperator ";
+            foreach ($_POST as $key => $value) {            
+                if($_POST[$key] && $key !== "search"){
+                    $parameters[":$key"] = "%$value%";
+                    $where = $where . "$key LIKE :$key $logicalOperator ";
+                }
+            }            
+
+            if(!count($parameters)) {
+                ?>
+                    <span style="color:red;">ERROR: Especifique al menos un criterio de búsqueda</span>
+                <?php
             }
         }
+
 
         $where = substr($where, 0, strlen($where) - (strlen($logicalOperator) + 1));
 
@@ -54,20 +61,17 @@
     ?>
 
     <form method="POST">
-        Name <input type="text" name="nombre" value="<?php echo isset($_POST["nombre"]) ? $_POST["nombre"] : ""  ?>" /> <br/>
+        Name <input type="text" name="nombre" value="<?= (isset($_POST["nombre"])) ? $_POST["nombre"] : "" ?>"/> <br/>
         Category 
         <select name="idCategoria" >
             <option value="">Todos</option>
             <?php
                 for($i=0; $i < count($categories); $i++){
-                    $selected = "";
-                    if(isset($_POST["idCategoria"]) && $_POST["idCategoria"] == $categories[$i]["id"]){
-                        $selected = "selected";
-                    }
             ?>
 
                 <option 
-                    value="<?php echo $categories[$i]["id"];  ?>" <?php echo $selected;  ?>>
+                    <?= (isset($_POST["idCategoria"]) && $_POST["idCategoria"] == $categories[$i]["id"]) ? "selected" : "" ?>
+                    value="<?php echo $categories[$i]["id"];  ?>">
                     <?php echo $categories[$i]["nombre"];  ?>
                 </option>
             <?php
@@ -76,7 +80,7 @@
         </select> 
         <br/>
 
-        Price <input type="text" name="precio" value="<?php echo isset($_POST["precio"]) ? $_POST["precio"] : ""  ?>" />
+        Price <input type="text" name="precio" value="<?= (isset($_POST["precio"])) ? $_POST["precio"] : "" ?>" />
         <br/><br/>
         <input type="submit" name="search" value="Search products (OR)" />
         <input type="submit" name="search" value="Search products (AND)" />
