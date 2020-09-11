@@ -23,14 +23,14 @@
             }
             $where = " WHERE ";
 
-            foreach ($_POST as $key => $value) {            
+            foreach ($_POST as $key => $value) {
                 if($_POST[$key] && $key !== "search"){
-                    if($key == "idCategory") {
-                        $parameters[":$key"] = "%$value%";
+                    if($key == "idCategoria") {
+                        $parameters[":$key"] = "$value";
                         $where = $where . "$key = :$key $logicalOperator ";
                     }
                     else {
-                        $parameters[":$key"] = "$value";
+                        $parameters[":$key"] = "%$value%";
                         $where = $where . "$key LIKE :$key $logicalOperator ";
                     }
                 }
