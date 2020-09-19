@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        esta es la vista de productos
+        <form>
+            <input type="button" value="Ver productos" onclick="traerProductos()" />
+        </form>
+    </main>
+    <script>
+        //Paso 1: Llamado a JavaScript (AJAX Engine)
+        function traerProductos(){
+
+            //Paso 2: Crear el objeto XHR
+            let objetoXHR = new XMLHttpRequest();
+
+            //Paso 3: Preparar una función de respuesta (callback function)
+            objetoXHR.onreadystatechange = function(){
+                if(objetoXHR.readyState == 4 && objetoXHR.status == 200){
+                    alert(objetoXHR.responseText);
+                }
+            };
+
+            //Paso 4: Abrir conexión con el servidor
+            objetoXHR.open('GET', 'products-api.php');
+
+            //Paso 5: Enviar request al servidor
+            objetoXHR.send();
+        }
+    </script>
+</body>
+</html>

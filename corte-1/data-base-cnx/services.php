@@ -31,7 +31,9 @@
             ':id'=>NULL,
 			':nombre'=>$name,
 			':precio'=>$price,
-			':idCategoria'=>$categoryId));
+            ':idCategoria'=>$categoryId));
+            
+        sleep(8);
 
         //6. Check result (success or error), regarding the result, send client response
         if($result){

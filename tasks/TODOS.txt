@@ -54,7 +54,11 @@
 		2. September, friday the fourth: Final project support
 		3. September, tuesday 8: Final project support
 		4. September, friday 11. Grading.
-		
-		
-		
-		
+	
+---------- September, monday 21
+	1. Create new repository called "p4-ajax-01"
+	2. As per your projects create a server file (.php) and a client file .html
+	3. Into the server file, create a SQL query that should filter some data according to a variable
+	4. Into the client file, create a user interface with a form to request the query value and make and
+	   make an AJAX request
+	5. Include screenshots of the AJAX working in GitHub
