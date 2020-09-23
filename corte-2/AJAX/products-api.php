@@ -4,9 +4,9 @@
         //Servicio 1: createProduct
         //1. Data base connection data
         $dbhost 	= "localhost";
-	    $dbname		= "supermercado";
-	    $dbuser		= "root";
-	    $dbpass		= "";
+	$dbname		= "supermercado";
+	$dbuser		= "root";
+	$dbpass		= "";
 
         //2. Get REQUEST data
 

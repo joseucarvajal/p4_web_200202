@@ -62,3 +62,10 @@
 	4. Into the client file, create a user interface with a form to request the query value and make and
 	   make an AJAX request
 	5. Include screenshots of the AJAX working in GitHub
+
+---------- September, friday 25
+	1. Create new repository called "p4-ajax-02-ajax-search"
+	2. Create a loading indicator... Bonuses for image based loading indicators...
+	3. You could use the sleep(...) php function so that the server performs the operations slowly
+	4. Indicator must be shown as the XHR retrieves data from the server
+	5. Include screenshots of the AJAX working in GitHub

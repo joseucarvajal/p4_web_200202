@@ -12,7 +12,13 @@
             <input type="button" value="Ver productos" onclick="traerProductos()" />
         </form>
     </main>
+    <div id="products">
+    </div>
+
     <script>
+
+        const divProducts = document.getElementById('products');
+
         //Paso 1: Llamado a JavaScript (AJAX Engine)
         function traerProductos(){
 
@@ -22,7 +28,12 @@
             //Paso 3: Preparar una función de respuesta (callback function)
             objetoXHR.onreadystatechange = function(){
                 if(objetoXHR.readyState == 4 && objetoXHR.status == 200){
-                    alert(objetoXHR.responseText);
+                    const productsArr = JSON.parse(objetoXHR.responseText);
+                    for(let prod of productsArr){
+                        const divProductInfo = document.createElement('div');
+                        divProductInfo.innerHTML =  `<span style="font-weight:bold;">${prod.nombre}</span> <span>$${prod.precio}</span>`;
+                        divProducts.appendChild(divProductInfo);
+                    }
                 }
             };
 
@@ -33,5 +44,6 @@
             objetoXHR.send();
         }
     </script>
+
 </body>
 </html>
