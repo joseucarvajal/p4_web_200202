@@ -4,41 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        form{
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
     <main>
         esta es la vista de productos
-        <form>
-            <input type="button" value="Ver productos" onclick="traerProductos()" />
-        </form>
+        <div style="display: flex; justify-content: space-around;">
+            <form id="form-1">
+                <input name="name">
+                <input type="button" value="Ver productos" onclick="traerProductos(1)" />
+                <div id="products-1">
+                    <img src="./img/ajax-loader.gif" class="loading" style="visibility: hidden;"/> 
+                    <div class="results"></div>            
+                </div>
+            </form>
+            <form id="form-2">
+                <input name="name">
+                <input type="button" value="Ver productos" onclick="traerProductos(2)" />
+                <div id="products-2">
+                    <img src="./img/ajax-loader.gif" class="loading" style="visibility: hidden;"/> 
+                    <div class="results"></div>            
+                </div>
+            </form>
+            <form id="form-3">
+                <input name="name">
+                <input type="button" value="Ver productos" onclick="traerProductos(3)" />
+                <div id="products-3">
+                    <img src="./img/ajax-loader.gif" class="loading" style="visibility: hidden;"/> 
+                    <div class="results"></div>            
+                </div>
+            </form>
+        </div>
     </main>
-    <div id="products">
-    </div>
 
     <script>
 
-        const divProducts = document.getElementById('products');
-
+        
         //Paso 1: Llamado a JavaScript (AJAX Engine)
-        function traerProductos(){
+        function traerProductos(formNumber){
+            const divProducts = document.getElementById(`products-${formNumber}`);            
+            const loadingGif = divProducts.getElementsByClassName('loading')[0];
+            loadingGif.style.visibility = "visible";
+            
+            const results = divProducts.getElementsByClassName('results')[0];
+            results.innerHTML = '';
 
             //Paso 2: Crear el objeto XHR
             let objetoXHR = new XMLHttpRequest();
-
+            
             //Paso 3: Preparar una función de respuesta (callback function)
             objetoXHR.onreadystatechange = function(){
                 if(objetoXHR.readyState == 4 && objetoXHR.status == 200){
+                    loadingGif.style.visibility = "hidden";
                     const productsArr = JSON.parse(objetoXHR.responseText);
                     for(let prod of productsArr){
                         const divProductInfo = document.createElement('div');
                         divProductInfo.innerHTML =  `<span style="font-weight:bold;">${prod.nombre}</span> <span>$${prod.precio}</span>`;
-                        divProducts.appendChild(divProductInfo);
+                        results.appendChild(divProductInfo);
                     }
                 }
             };
 
+            const form = document.getElementById(`form-${formNumber}`);
             //Paso 4: Abrir conexión con el servidor
-            objetoXHR.open('GET', 'products-api.php');
+            objetoXHR.open('GET', `products-api.php?name=${form.name.value}`);
 
             //Paso 5: Enviar request al servidor
             objetoXHR.send();

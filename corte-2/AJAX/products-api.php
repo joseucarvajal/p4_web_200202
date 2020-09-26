@@ -9,15 +9,19 @@
 	$dbpass		= "";
 
         //2. Get REQUEST data
+        $name = $_GET["name"];
 
         //3. Connect to database
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
 
         //4. Prepare SQL INSERT statement
-        $sql = "SELECT id, nombre, precio, idCategoria FROM productos";
+        $sql = "SELECT id, nombre, precio, idCategoria FROM productos WHERE nombre LIKE :name";
 
+        sleep(5);
+        
         //5. Execute SQL statement
         $q = $conn->prepare($sql);
+        $q->bindValue(':name', "%{$name}%");
         $q->execute();
 
         $productsList = $q->fetchAll(PDO::FETCH_ASSOC);
