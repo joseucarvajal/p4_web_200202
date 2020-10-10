@@ -71,3 +71,17 @@
 	3. You could use the sleep(...) php function so that the server performs the operations slowly
 	4. Indicator must be shown as the XHR retrieves data from the server
 	5. Include screenshots of the AJAX working in GitHub
+	
+---------- September, tuesday 13
+	1. Create new .NET project called "net-migrations"
+	2. Create two clases with a relationship (foreign-key) between them
+		Create DbContext class
+		Create Configurations classes for data base
+		Connect with database
+		Create one initial Migration as we did in class
+		Create the database automatically
+		Upload screenshots executing the migration commands 
+	3. Create new repository in gitHub called "net-migrations"
+	4. Create: data base connection, migration to create the database automatically as we did in class
+	5. Include some data base screenshots into the project in GitHub
+	
