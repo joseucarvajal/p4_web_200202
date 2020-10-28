@@ -85,3 +85,14 @@
 	4. Create: data base connection, migration to create the database automatically as we did in class
 	5. Include some data base screenshots into the project in GitHub
 	
+============================================ Corte 03
+---------- November, monday 02
+	1. Create new .NET project called "net-api-swagger"
+	2. Create new GitHub repository called "net-api-swagger"
+	3. Create 3 related entities
+	4. Create CRUD (Create, Get All) for all of the entities
+	5. install and use Swagger tool to specificy API documentation
+	6. Create and upload screenshots to GitHub, showing the Swagger UI:
+		6.1. Creating objets
+		6.2. Reading objets
+		6.3. Data-base screenshots
