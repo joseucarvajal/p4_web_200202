@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protal web domicilios</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+      integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    Protal web solicitud Domicilios
+    <form id="form-producto">
+      Nombre producto: <input type="text" name="nombreProducto" /> <br />
+
+      <div style="display: flex; justify-content: space-around;">
+        <input type="button" value="Crear producto" onclick="crearProducto()" />
+        <input
+          type="button"
+          value="Listar productos"
+          onclick="listarProductos()"
+        />
+      </div>
+      <br />
+    </form>
+
+    <script type="text/javaScript">
+      function crearProducto() {
+
+          const form = document.getElementById('form-producto');
+
+          const productoObj = {
+              Nombre: form.nombreProducto.value
+          };
+
+          console.log(JSON.stringify(productoObj));
+          fetch("https://localhost:44363/api/Productos", {
+            method:"POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(productoObj)
+          })
+          .then(function(response){ return response.json(); })
+          .then(function(producto){ console.log(producto); })
+          .catch(function(err){alert('Hubo un error guardando el producto');});
+
+          /*
+          axios.post("https://localhost:44363/api/Productos", productoObj)
+          .then((newProduct)=>{console.log({newProduct})})
+          .catch((err) => { console.log({err}); });
+          */
+      }
+
+      function listarProductos() {
+
+          const form = document.getElementById('form-producto');
+
+          /*
+          fetch("https://localhost:44363/api/Productos", {
+            method:"GET",
+            headers: {
+              "Content-Type": "application/json",
+            }
+          })
+          .then(response => response.json())
+          .then(productos => console.log(productos));
+          */
+
+          axios.get("https://localhost:44363/api/Productos")
+          .then((productos)=>{console.log({productos})})
+          .catch((err) => { console.log({err}); });
+      }
+    </script>
+  </body>
+</html>
