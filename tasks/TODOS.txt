@@ -96,3 +96,33 @@
 		6.1. Creating objets
 		6.2. Reading objets
 		6.3. Data-base screenshots
+		
+---------- November, 
+	1. Create a new application with .Net Core in server side (Back-End)
+		1.1. This application should have at least 3 tables (entities) related among them.
+		1.2. This application should expose a set of REST services (To manage the 3 previous entities)
+		1.3. This application should include a search functionality
+		1.4. This application must make some math calculations
+		1.5. Create new GitHub repository
+		1.6. Should include Swagger
+		
+	2. Create a new Web client application in another server different to Asp.net Core (Front-End)
+		2.1. This application should have at least 3 different web pages
+		2.2. This application should interact (post or get data from the Back-End application)
+		2.3. Visualize datos from the math calculations previously done in the Back-End application
+		2.4. This application should use AJAX
+		2.5. An AJAX loading indicator must be shown.
+		2.6. The Select or DropDown should be loaded/initialized with AJAX data loaded from the back-end application
+		2.7. Create a new GitHub repository
+		
+	RULES:
+		1. No legacy projects are allow.
+		2. Should use a database system to persist data.
+		3. The Back-End and Front-End must be created in (Back-End: .Net Core Web API, Front-End: HTML, CSS, Javascript, -AJAX-)
+		
+		
+Scheduling:
+	
+	
+	
+	
